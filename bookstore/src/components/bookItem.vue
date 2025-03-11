@@ -1,16 +1,21 @@
 <!-- src/components/BookItem.vue -->
 <template>
-    <div class="card mb-3">
+    <div class="card mb-3 ">
       <div class="row g-0">
-        <div class="col-md-4">
-          <img :src="book.coverImage" class="img-fluid rounded-start" alt="Cover Image">
-        </div>
-        <div class="col-md-8">
+        <div class="col">
           <div class="card-body">
             <h5 class="card-title">{{ book.title }}</h5>
             <p class="card-text">{{ book.author }}</p>
-            <p class="card-text">{{ book.price | currency }}</p>
-            <button class="btn btn-primary" @click="addToCart(book)">Tambah ke Keranjang</button>
+            
+            <div class="row">
+              <div class="col">
+                <button class="btn btn-primary m-2" @click="addToCart(book)">Tambah ke Keranjang</button>
+              <button class="btn btn-warning m-2" @click="">Hapus</button>
+              <button class="btn btn-danger m-2" @click="">Update</button>
+              </div>
+              
+            </div>
+            
           </div>
         </div>
       </div>
